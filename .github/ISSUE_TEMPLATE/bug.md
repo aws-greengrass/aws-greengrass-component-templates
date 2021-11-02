@@ -18,7 +18,7 @@ A clear and concise description of what you expected to happen.
 Tell us what actually happened.
 
 **Environment**
- - OS: [e.g. Ubuntu 20.04]
+ - OS: [e.g. Ubuntu 20.04] (If possible, provide output of `uname -a`)
  - JDK version:
  - Nucleus version:
 
