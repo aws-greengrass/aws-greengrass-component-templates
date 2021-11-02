@@ -1,0 +1,15 @@
+{
+  "component" :{
+    "<>.<>.JavaHelloWorld": {
+      "author": "<author>",
+      "version": "LATEST",
+      "build": {
+        "command" : ["default"]
+      },
+      "publish": {
+        "bucket_name": "default"
+      }
+    }
+  },
+  "tools_version": "1.0.0"
+}
