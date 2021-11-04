@@ -1,0 +1,16 @@
+{
+  "component" :{
+    "com.example.PythonHelloWorld": {
+      "author": "<PLACEHOLDER_AUTHOR>",
+      "version": "LATEST",
+      "build": {
+        "command" : ["default"]
+      },
+      "publish": {
+        "bucket": "<PLACEHOLDER_BUCKET>",
+        "region": "<PLACEHOLDER_REGION>"
+      }
+    }
+  },
+  "tools_version": "1.0.0"
+}
