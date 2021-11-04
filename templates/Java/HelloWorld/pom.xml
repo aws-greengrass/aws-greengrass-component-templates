@@ -5,20 +5,24 @@
   <groupId>com.hello</groupId>
   <artifactId>HelloWorld</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>HelloWorld</name>
   <url>http://maven.apache.org</url>
+  <properties>
+    <junitVersion>5.5.2</junitVersion>
+    <mavenPluginVersion>2.1</mavenPluginVersion>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
-      <version>5.5.2</version>
+      <version>${junitVersion}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.5.2</version>
+      <version>${junitVersion}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -27,7 +31,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>2.1</version>
+        <version>${mavenPluginVersion}</version>
         <executions>
           <execution>
             <phase>package</phase>

@@ -1,13 +1,14 @@
 {
   "component" :{
-    "<>.<>.JavaHelloWorld": {
-      "author": "<author>",
+    "com.example.JavaHelloWorld": {
+      "author": "<PLACEHOLDER_AUTHOR>",
       "version": "LATEST",
       "build": {
         "command" : ["default"]
       },
       "publish": {
-        "bucket_name": "default"
+        "bucket": "default",
+        "region": "default"
       }
     }
   },
