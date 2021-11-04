@@ -1,0 +1,16 @@
+{
+  "component" :{
+    "com.example.JavaHelloWorld": {
+      "author": "<PLACEHOLDER_AUTHOR>",
+      "version": "LATEST",
+      "build": {
+        "command" : ["default"]
+      },
+      "publish": {
+        "bucket": "default",
+        "region": "default"
+      }
+    }
+  },
+  "tools_version": "1.0.0"
+}
