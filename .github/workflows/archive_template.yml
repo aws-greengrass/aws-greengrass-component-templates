@@ -14,16 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Zip the templates
+      - name: Archive the templates
         run: |
-          mkdir templates
+          mkdir archived-templates
           # TODO: Add commands to zip the templates
 
       - name: Upload zipped artifacts
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: templates
-          path: templates/*.zip
+          name: archived-templates
+          path: archived-templates/*.zip
 
       - name: Download uploaded artifacts
         id: download
@@ -35,5 +35,5 @@ jobs:
         id: upload-release-asset
         uses: softprops/action-gh-release@v1
         with:
-          files: ${{steps.download.outputs.download-path}}/templates/*.zip
+          files: ${{steps.download.outputs.download-path}}/archived-templates/*.zip
           tag_name: v1.0

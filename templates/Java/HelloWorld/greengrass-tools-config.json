@@ -7,8 +7,8 @@
         "command" : ["default"]
       },
       "publish": {
-        "bucket": "default",
-        "region": "default"
+        "bucket": "<PLACEHOLDER_BUCKET>",
+        "region": "<PLACEHOLDER_REGION>"
       }
     }
   },
