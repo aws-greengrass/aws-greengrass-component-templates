@@ -17,8 +17,8 @@ jobs:
       - name: Archive the templates
         run: |
           mkdir archived-templates
-          zip -r archived-templates/HelloWorld-java.zip templates/Java/HelloWorld/*
-          zip -r archived-templates/HelloWorld-python.zip templates/Python/HelloWorld/*
+          zip -r archived-templates/HelloWorld-java.zip templates/java/HelloWorld/*
+          zip -r archived-templates/HelloWorld-python.zip templates/python/HelloWorld/*
 
       - name: Upload zipped artifacts
         uses: actions/upload-artifact@v2.2.4
