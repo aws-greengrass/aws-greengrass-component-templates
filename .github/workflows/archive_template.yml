@@ -16,15 +16,19 @@ jobs:
       - uses: actions/checkout@v2
       - name: Archive the templates
         run: |
-          mkdir archived-templates
-          zip -r archived-templates/HelloWorld-java.zip templates/java/HelloWorld/*
-          zip -r archived-templates/HelloWorld-python.zip templates/python/HelloWorld/*
+          mkdir ~/archived-templates
+          # Archive Java templates
+          cd templates/java
+          zip -r ~/archived-templates/HelloWorld-java.zip HelloWorld
+          # Archive Python templates
+          cd ../python
+          zip -r ~/archived-templates/HelloWorld-python.zip HelloWorld
 
       - name: Upload zipped artifacts
         uses: actions/upload-artifact@v2.2.4
         with:
           name: archived-templates
-          path: archived-templates/*.zip
+          path: ~/archived-templates/*.zip
 
       - name: Download uploaded artifacts
         id: download
