@@ -1,10 +1,10 @@
 {
-  "component" :{
+  "component": {
     "com.example.PythonHelloWorld": {
       "author": "<PLACEHOLDER_AUTHOR>",
       "version": "LATEST",
       "build": {
-        "command" : ["default"]
+        "build_system": "zip"
       },
       "publish": {
         "bucket": "<PLACEHOLDER_BUCKET>",
