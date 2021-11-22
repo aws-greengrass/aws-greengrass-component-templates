@@ -6,8 +6,7 @@ ComponentDescription: "This is simple Hello World component written in Java."
 ComponentPublisher: "{COMPONENT_AUTHOR}"
 ComponentConfiguration:
   DefaultConfiguration:
-    Config:
-      Message: "World"
+    Message: "World"
 Manifests:
   - Platform:
       os: all
