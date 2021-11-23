@@ -1,14 +1,14 @@
 {
   "component": {
     "com.example.PythonHelloWorld": {
-      "author": "<PLACEHOLDER_AUTHOR>",
-      "version": "LATEST",
+      "author": "Amazon",
+      "version": "NEXT_PATCH",
       "build": {
         "build_system": "zip"
       },
       "publish": {
-        "bucket": "<PLACEHOLDER_BUCKET>",
-        "region": "<PLACEHOLDER_REGION>"
+        "bucket": "helloworldjava",
+        "region": "us-east-1"
       }
     }
   },

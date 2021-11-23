@@ -1,14 +1,14 @@
 {
   "component": {
     "com.example.JavaHelloWorld": {
-      "author": "<PLACEHOLDER_AUTHOR>",
-      "version": "LATEST",
+      "author": "Amazon",
+      "version": "NEXT_PATCH",
       "build": {
         "build_system": "maven"
       },
       "publish": {
-        "bucket": "<PLACEHOLDER_BUCKET>",
-        "region": "<PLACEHOLDER_REGION>"
+        "bucket": "bharanep",
+        "region": "us-east-1"
       }
     }
   },
