@@ -2,7 +2,7 @@
   "component": {
     "com.example.PythonHelloWorld": {
       "author": "<PLACEHOLDER_AUTHOR>",
-      "version": "LATEST",
+      "version": "NEXT_PATCH",
       "build": {
         "build_system": "zip"
       },
