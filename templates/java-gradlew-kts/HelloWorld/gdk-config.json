@@ -4,7 +4,7 @@
       "author": "<PLACEHOLDER_AUTHOR>",
       "version": "NEXT_PATCH",
       "build": {
-        "build_system": "gradle"
+        "build_system": "gradlew"
       },
       "publish": {
         "bucket": "<PLACEHOLDER_BUCKET>",
