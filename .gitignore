@@ -1,4 +1,6 @@
 .idea/
+target/
+.flattened-pom.xml
 **.DS_STORE
 **.DS_Store
 *.iml
