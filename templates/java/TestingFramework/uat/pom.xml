@@ -5,6 +5,7 @@
 
   <parent>
     <groupId>com.greengrass.templates</groupId>
+    <!--    FIXME: Change the name of the component below - Must match the name of artifact in the root pom.xml -->
     <artifactId>HelloWorldWithTestFramework</artifactId>
     <version>${revision}</version>
   </parent>

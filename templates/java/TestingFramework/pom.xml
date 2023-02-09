@@ -5,6 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.greengrass.templates</groupId>
+  <!--    FIXME: Change the name of the component below  -->
   <artifactId>HelloWorldWithTestFramework</artifactId>
   <packaging>pom</packaging>
   <version>${revision}</version>

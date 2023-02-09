@@ -82,11 +82,9 @@ From the root of the project run (make sure to replace the values)
 In order for the template to be useful for your component you will have to change a few package names
 
 1) Replace the `com.templates.otf` package name to whatever name you want. Make sure to not only change the folder names but also the text referencing it.
+2) Replace the contents of this README
+3) Change the component. Do a search and replace for `HelloWorldWithTestFramework`
 
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description 
 
 ## License
 

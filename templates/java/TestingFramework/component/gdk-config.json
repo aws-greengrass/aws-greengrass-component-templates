@@ -1,6 +1,6 @@
 {
     "component": {
-      "com.example.HelloWorldWithTestFramework": {
+      "HelloWorldWithTestFramework": {
         "author": "<PLACEHOLDER_AUTHOR>",
         "version": "NEXT_PATCH",
         "build": {

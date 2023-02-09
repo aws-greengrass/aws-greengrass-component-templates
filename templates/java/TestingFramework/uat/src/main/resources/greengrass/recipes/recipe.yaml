@@ -1,6 +1,6 @@
 ---
 RecipeFormatVersion: 2020-01-25
-ComponentName: com.example.HelloWorldWithTestFramework
+ComponentName: HelloWorldWithTestFramework
 ComponentVersion: '1.0.0'
 ComponentDescription: A sample recipe for testing your component
 ComponentPublisher: Jane Doe
