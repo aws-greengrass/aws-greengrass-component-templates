@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.greengrass.templates</groupId>
-  <artifactId>OTFSample</artifactId>
+  <artifactId>HelloWorldWithTestFramework</artifactId>
   <packaging>pom</packaging>
   <version>${revision}</version>
 
@@ -15,8 +15,6 @@
   </modules>
 
   <properties>
-    <!-- FIXME Change the name below for the name you want for your component jar   -->
-    <component.artifactId>HelloWorldWithTestFramework</component.artifactId>
     <revision>1.0.0-SNAPSHOT</revision>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>

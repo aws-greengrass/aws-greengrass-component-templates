@@ -6,11 +6,11 @@
 
   <parent>
     <groupId>com.greengrass.templates</groupId>
-    <artifactId>OTFSample</artifactId>
+    <artifactId>HelloWorldWithTestFramework</artifactId>
     <version>${revision}</version>
   </parent>
 
-  <artifactId>${component.artifactId}</artifactId>
+  <artifactId>Component</artifactId>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

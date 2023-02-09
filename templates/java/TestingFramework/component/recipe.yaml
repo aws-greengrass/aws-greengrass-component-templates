@@ -8,6 +8,6 @@ Manifests:
   - Platform:
       os: all
     Artifacts:
-      - URI: "s3://BUCKET_NAME/COMPONENT_NAME/COMPONENT_VERSION/HelloWorldWithTestFramework-1.0.0.jar"
+      - URI: "s3://BUCKET_NAME/COMPONENT_NAME/COMPONENT_VERSION/Component-1.0.0-SNAPSHOT.jar"
     Lifecycle:
-      Run: "java -cp {artifacts:path}/HelloWorldWithTestFramework-1.0.0.jar com.templates.otf.App"
+      Run: "java -cp {artifacts:path}/Component-1.0.0-SNAPSHOT.jar com.templates.otf.App"
