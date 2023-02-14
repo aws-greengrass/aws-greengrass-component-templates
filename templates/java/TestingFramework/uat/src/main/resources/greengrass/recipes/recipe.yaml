@@ -1,0 +1,15 @@
+---
+RecipeFormatVersion: 2020-01-25
+ComponentName: HelloWorldWithTestFramework
+ComponentVersion: '1.0.0'
+ComponentDescription: A sample recipe for testing your component
+ComponentPublisher: Jane Doe
+Manifests:
+  - Artifacts:
+      - URI: "classpath:/greengrass/artifacts/componentArtifact.jar"
+        Permission:
+          Read: ALL
+          Execute: ALL
+    Lifecycle:
+      Run: |
+        java -cp {artifacts:path}/componentArtifact.jar com.templates.otf.App
