@@ -3,8 +3,6 @@
 This repository consists of different Component Templates supported by Greengrass Development Kit - CLI.
 
 ### Build instructions
-After you have made changes to templates or have added new changes, make sure your template name is listed in corresponding `build.sh` and it can be built using the same.
-
 To ensure that, new changes doesnt cause any regression, execute parent `build.sh` included in `aws-greengrass-component-templates`
 ## Security
 
