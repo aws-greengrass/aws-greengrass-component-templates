@@ -1,0 +1,16 @@
+{
+  "component": {
+    "com.example.PythonLocalPubSub": {
+      "author": "<PLACEHOLDER_AUTHOR>",
+      "version": "NEXT_PATCH",
+      "build": {
+        "build_system": "zip"
+      },
+      "publish": {
+        "bucket": "ggv2componentartifacts",
+        "region": "us-west-2"
+      }
+    }
+  },
+  "gdk_version": "1.2.0"
+}
