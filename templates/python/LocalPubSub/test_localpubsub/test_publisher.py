@@ -1,6 +1,9 @@
+from unittest.mock import call
+
 import pytest
+from awsiot.greengrasscoreipc.model import BinaryMessage, PublishMessage
 from localpubsub import publisher
-from awsiot.greengrasscoreipc.model import PublishMessage, BinaryMessage
+
 
 @pytest.fixture
 def ipc_client(mocker):
@@ -14,11 +17,13 @@ def ipc_client(mocker):
 
 def test_publish_message_N_times(ipc_client):
     publisher.publish_message_N_times(ipc_client, "topic", "World")
-    assert ipc_client.publish_to_topic.call_count == 10
-    ipc_client.publish_to_topic.assert_called_with(topic='topic', publish_message=PublishMessage(binary_message=BinaryMessage(message=b'World')))
+    args = call(topic="topic", publish_message=PublishMessage(binary_message=BinaryMessage(message=b"World")))
+    call_count_with_args = [args] * 10
+    assert ipc_client.publish_to_topic.call_args_list == call_count_with_args
 
 
 def test_publish_message_N_times_5(ipc_client):
     publisher.publish_message_N_times(ipc_client, "topic", "World", 5)
-    assert ipc_client.publish_to_topic.call_count == 5
-    ipc_client.publish_to_topic.assert_called_with(topic='topic', publish_message=PublishMessage(binary_message=BinaryMessage(message=b'World')))
+    args = call(topic="topic", publish_message=PublishMessage(binary_message=BinaryMessage(message=b"World")))
+    call_count_with_args = [args] * 5
+    assert ipc_client.publish_to_topic.call_args_list == call_count_with_args
