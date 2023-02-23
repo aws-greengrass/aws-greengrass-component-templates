@@ -5,20 +5,16 @@ import software.amazon.awssdk.aws.greengrass.SubscribeToTopicResponseHandler;
 import software.amazon.awssdk.aws.greengrass.model.SubscribeToTopicResponse;
 import software.amazon.awssdk.aws.greengrass.model.UnauthorizedError;
 
-import java.io.IOException;
 import java.util.Arrays;
 
 public class App {
-    private static GreengrassCoreIPCClientV2 ipcClient ;
-
-    public App() throws IOException {
-        ipcClient = GreengrassCoreIPCClientV2.builder().build();
-    }
+    private static GreengrassCoreIPCClientV2 ipcClient;
 
     public static void main(String[] args) {
         String topic = args[0];
         String message = String.join(" ", Arrays.copyOfRange(args, 1, args.length));
-        try  {
+        try {
+            ipcClient = GreengrassCoreIPCClientV2.builder().build();
             // Subscribe to the topic
             Subscriber subscriber = new Subscriber(App.ipcClient);
             GreengrassCoreIPCClientV2.StreamingResponse<SubscribeToTopicResponse,
@@ -40,5 +36,5 @@ public class App {
             System.exit(1);
         }
     }
-
 }
+
