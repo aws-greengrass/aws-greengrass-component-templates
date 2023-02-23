@@ -13,7 +13,7 @@
     <mavenPluginVersion>2.1</mavenPluginVersion>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <iotDeviceSdkVersion>1.10.6</iotDeviceSdkVersion>
+    <iotDeviceSdkVersion>1.11.5</iotDeviceSdkVersion>
     <mockito.version>4.3.1</mockito.version>
   </properties>
   <dependencies>

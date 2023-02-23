@@ -1,8 +1,10 @@
 package com.localpubsub;
 
 import software.amazon.awssdk.aws.greengrass.GreengrassCoreIPCClientV2;
+import software.amazon.awssdk.aws.greengrass.SubscribeToTopicResponseHandler;
 import software.amazon.awssdk.aws.greengrass.model.BinaryMessage;
 import software.amazon.awssdk.aws.greengrass.model.SubscribeToTopicRequest;
+import software.amazon.awssdk.aws.greengrass.model.SubscribeToTopicResponse;
 import software.amazon.awssdk.aws.greengrass.model.SubscriptionResponseMessage;
 
 import java.nio.charset.StandardCharsets;
@@ -16,7 +18,8 @@ public class Subscriber {
 
     }
 
-    public GreengrassCoreIPCClientV2.StreamingResponse subscribe(String topic) throws InterruptedException {
+    public GreengrassCoreIPCClientV2.StreamingResponse<SubscribeToTopicResponse,
+            SubscribeToTopicResponseHandler> subscribe(String topic) throws InterruptedException {
         SubscribeToTopicRequest request = new SubscribeToTopicRequest().withTopic(topic);
         return clientV2.subscribeToTopic(request, this::onStreamEvent,
                         Optional.of(this::onStreamError),
