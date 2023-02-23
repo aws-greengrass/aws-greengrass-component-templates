@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class App {
-    private  final GreengrassCoreIPCClientV2 ipcClient ;
+    private static GreengrassCoreIPCClientV2 ipcClient ;
 
     public App() throws IOException {
         ipcClient = GreengrassCoreIPCClientV2.builder().build();
@@ -19,14 +19,13 @@ public class App {
         String topic = args[0];
         String message = String.join(" ", Arrays.copyOfRange(args, 1, args.length));
         try  {
-            App app = new App();
             // Subscribe to the topic
-            Subscriber subscriber = new Subscriber(app.ipcClient);
+            Subscriber subscriber = new Subscriber(App.ipcClient);
             GreengrassCoreIPCClientV2.StreamingResponse<SubscribeToTopicResponse,
                     SubscribeToTopicResponseHandler> response = subscriber.subscribe(topic);
 
             // Publish messages to the topic
-            Publisher publisher = new Publisher(app.ipcClient);
+            Publisher publisher = new Publisher(App.ipcClient);
             publisher.publishMessageToTopicNTimes(topic, message, 10);
 
             // To stop subscribing, close the stream.
