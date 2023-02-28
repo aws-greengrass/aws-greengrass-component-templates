@@ -3,7 +3,7 @@ from pathlib import Path
 
 supported_languages = ["java", "python"]
 current_working_directory = Path("./").resolve()
-output_dir = Path.home().joinpath("archive-templates").resolve()
+output_dir = Path.home().joinpath("archived-templates").resolve()
 Path.mkdir(output_dir, parents=True, exist_ok=True)
 
 for language in supported_languages:
