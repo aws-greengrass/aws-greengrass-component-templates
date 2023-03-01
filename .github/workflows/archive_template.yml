@@ -13,14 +13,17 @@ jobs:
   archive:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+      - uses: actions/checkout@v2
       - name: Archive the templates
         run: |
-          python archive-templates.py
+          mkdir ~/archived-templates
+          # Archive Java templates
+          cd templates/java
+          zip -r ~/archived-templates/HelloWorld-java.zip HelloWorld
+          # Archive Python templates
+          cd ../python
+          zip -r ~/archived-templates/HelloWorld-python.zip HelloWorld
+
       - name: Upload zipped artifacts
         uses: actions/upload-artifact@v2.2.4
         with:
