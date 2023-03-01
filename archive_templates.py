@@ -12,5 +12,5 @@ for language in supported_languages:
     for template in templates_sub_dir:
         zip_file_name = template.name + "-" + language
         zip_file_path = Path(output_dir).joinpath(zip_file_name).resolve()
-        shutil.make_archive(zip_file_path, "zip", root_dir=template)
-        print("Created zip file for template " + zip_file_name + " at " + str(output_dir))
+        shutil.make_archive(zip_file_name, "zip", root_dir=template)
+        print("Created zip file for template " + zip_file_name)
