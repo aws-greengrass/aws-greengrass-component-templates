@@ -20,9 +20,12 @@ jobs:
           # Archive Java templates
           cd templates/java
           zip -r ~/archived-templates/HelloWorld-java.zip HelloWorld
+          zip -r ~/archived-templates/LocalPubSub-java.zip LocalPubSub
+          zip -r ~/archived-templates/TestingFramework-java.zip TestingFramework
           # Archive Python templates
           cd ../python
           zip -r ~/archived-templates/HelloWorld-python.zip HelloWorld
+          zip -r ~/archived-templates/LocalPubSub-python.zip LocalPubSub
 
       - name: Upload zipped artifacts
         uses: actions/upload-artifact@v2.2.4
