@@ -68,13 +68,33 @@ Prerequisites:
  * Have java installed
  * Have maven installed
  * Build the template `mvn clean verify`
- * Download the latest nucleus `curl -s https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip > greengrass-nucleus-latest.zip`
-   * Note down the path of the zip in your file system (you'll need it below)
+ * Download the latest nucleus
+    * On Linux Distros `curl -s https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip > greengrass-nucleus-latest.zip`
+    * On Windows Powershell `iwr -Uri "https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip" -OutFile "greengrass-nucleus-latest.zip"`
+* Note down the path of the zip in your file system (you'll need it below)
 
 
 From the root of the project run (make sure to replace the values)
 
+**On Linux Distros**
+
 `java -Dggc.archive=<path-to-nucleus-zip> -Dtest.log.path=./results -Dtags=Sample -jar ./uat/target/ComponentUATs-1.0.0-SNAPSHOT.jar`
+
+**On Windows**
+
+Before you can run the tests on windows you first have to Configure user credentials for Windows devices
+
+* Download the [psexec utility](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec)
+
+* Create user in the LocalSystem account on the Windows device. Run the commands below and replace user-name with the same name of your current system user (output from the previous command) and password with a secure password.
+    * Run  `net user user-name password /ADD`
+    * Run `psexec -s cmd /c cmdkey /generic:user-name /user:user-name /pass:password`
+
+
+Finally run the test with
+
+`java -"Dggc.archive"=<path-to-nucleus-zip> -D"test.log.path"=.\results -Dtags=Sample -jar .\uat\target\ComponentUATs-1.0.0-SNAPSHOT.jar`
+
 
 
 ### Making changes
