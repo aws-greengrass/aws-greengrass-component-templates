@@ -22,7 +22,7 @@ jobs:
           zip -r ~/archived-templates/HelloWorld-java.zip HelloWorld
           zip -r ~/archived-templates/LocalPubSub-java.zip LocalPubSub
           zip -r ~/archived-templates/TestingFramework-java.zip TestingFramework
-          zip -r ~/archived-templates/TestTemplateForCli.zip TestTemplateForCli
+          zip -r ~/archived-templates/TestTemplateForCLI.zip TestTemplateForCLI
           # Archive Python templates
           cd ../python
           zip -r ~/archived-templates/HelloWorld-python.zip HelloWorld
