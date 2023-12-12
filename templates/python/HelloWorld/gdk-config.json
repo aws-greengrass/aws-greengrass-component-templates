@@ -4,7 +4,10 @@
       "author": "<PLACEHOLDER_AUTHOR>",
       "version": "NEXT_PATCH",
       "build": {
-        "build_system": "zip"
+        "build_system": "zip",
+        "options": {
+          "zip_name": ""
+        }
       },
       "publish": {
         "bucket": "<PLACEHOLDER_BUCKET>",
