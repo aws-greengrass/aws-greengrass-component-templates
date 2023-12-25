@@ -1,6 +1,6 @@
 #!/bin/bash
 
-languages_directories='Java Python'
+languages_directories='java python'
 current_directory=`pwd`
 for directory in $languages_directories; do
    echo "Building $directory templates"
