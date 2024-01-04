@@ -105,26 +105,30 @@ Feature: Confidence Test Suite
 
   @ConfidenceTest
   Scenario: As a Developer, I can deploy GDK_COMPONENT_NAME to my device and verify device RAM has not increased by more than a specified threshold
+    # To extend the test case, record RAM usage statistic under a unique identifier, such as RAM1 here.
     When I record the device's RAM usage statistic as RAM1
     And I create a Greengrass deployment with components
       | GDK_COMPONENT_NAME | GDK_COMPONENT_RECIPE_FILE |
       | aws.greengrass.Cli | LATEST                    |
     And I deploy the Greengrass deployment configuration
     Then the Greengrass deployment is COMPLETED on the device after 180 seconds
-  # Update component state accordingly. Possible states: {RUNNING, FINISHED, BROKEN, STOPPING}
+    # Update component state accordingly. Possible states: {RUNNING, FINISHED, BROKEN, STOPPING}
     Then I verify the GDK_COMPONENT_NAME component is RUNNING using the greengrass-cli
     When I record the device's RAM usage statistic as RAM2
+    # Update the intended threshold as needed, in MB. If extending the test case, use two unique identifiers recorded during previous steps.
     Then the increase in the RAM usage from RAM1 to RAM2 is less than 1024 MB
 
   @ConfidenceTest
   Scenario: As a Developer, I can deploy GDK_COMPONENT_NAME to my device and verify device CPU usage has not increased by more than a specified threshold
+    # To extend the test case, record CPU usage statistic under a unique identifier, such as CPU1 here.
     When I record the device's CPU usage statistic as CPU1
     And I create a Greengrass deployment with components
       | GDK_COMPONENT_NAME | GDK_COMPONENT_RECIPE_FILE |
       | aws.greengrass.Cli | LATEST                    |
     And I deploy the Greengrass deployment configuration
     Then the Greengrass deployment is COMPLETED on the device after 180 seconds
-  # Update component state accordingly. Possible states: {RUNNING, FINISHED, BROKEN, STOPPING}
+    # Update component state accordingly. Possible states: {RUNNING, FINISHED, BROKEN, STOPPING}
     Then I verify the GDK_COMPONENT_NAME component is RUNNING using the greengrass-cli
     When I record the device's CPU usage statistic as CPU2
+    # Update the intended threshold as needed, as percent utilization. If extending the test case, use two unique identifiers recorded during previous steps.
     Then the increase in the CPU usage from CPU1 to CPU2 is less than 25 percent
