@@ -36,7 +36,7 @@ jobs:
 
       - name: Download uploaded artifacts
         id: download
-        uses: actions/download-artifact@v2.0.10
+        uses: actions/download-artifact@v4.1.7
         with:
           path: ~/download/
 
