@@ -6,7 +6,7 @@ ComponentDescription: "This is simple Hello World component written in Java."
 ComponentPublisher: "{COMPONENT_AUTHOR}"
 Manifests:
   - Platform:
-      os: all
+      OS: all
     Artifacts:
       - URI: "s3://BUCKET_NAME/COMPONENT_NAME/COMPONENT_VERSION/Component-1.0.0-SNAPSHOT.jar"
     Lifecycle:

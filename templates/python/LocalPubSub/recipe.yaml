@@ -19,7 +19,7 @@ ComponentConfiguration:
             - "/topic/local/pubsub"
 Manifests:
   - Platform:
-      os: all
+      OS: all
     Artifacts:
       - URI: "s3://BUCKET_NAME/COMPONENT_NAME/COMPONENT_VERSION/com.example.PythonLocalPubSub.zip"
         Unarchive: ZIP

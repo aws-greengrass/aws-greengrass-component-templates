@@ -9,7 +9,7 @@ ComponentConfiguration:
     Message: "World"
 Manifests:
   - Platform:
-      os: all
+      OS: all
     Artifacts:
       - URI: "s3://BUCKET_NAME/COMPONENT_NAME/COMPONENT_VERSION/HelloWorld-1.0.0.jar"
     Lifecycle:
