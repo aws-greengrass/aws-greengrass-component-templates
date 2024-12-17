@@ -21,6 +21,6 @@ Manifests:
   - Platform:
       os: all
     Artifacts:
-      - URI: "s3://BUCKET_NAME/COMPONENT_NAME/COMPONENT_VERSION/LocalPubSub-1.0.0.jar"
+      - Uri: "s3://BUCKET_NAME/COMPONENT_NAME/COMPONENT_VERSION/LocalPubSub-1.0.0.jar"
     Lifecycle:
-      Run: "java -cp {artifacts:path}/LocalPubSub-1.0.0.jar com.localpubsub.App '{configuration:/Topic}' '{configuration:/Message}'"
+      run: "java -cp {artifacts:path}/LocalPubSub-1.0.0.jar com.localpubsub.App '{configuration:/Topic}' '{configuration:/Message}'"

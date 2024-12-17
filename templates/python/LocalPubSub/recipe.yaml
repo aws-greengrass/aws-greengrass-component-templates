@@ -21,7 +21,7 @@ Manifests:
   - Platform:
       os: all
     Artifacts:
-      - URI: "s3://BUCKET_NAME/COMPONENT_NAME/COMPONENT_VERSION/com.example.PythonLocalPubSub.zip"
+      - Uri: "s3://BUCKET_NAME/COMPONENT_NAME/COMPONENT_VERSION/com.example.PythonLocalPubSub.zip"
         Unarchive: ZIP
     Lifecycle:
-      Run: "python3 -u {artifacts:decompressedPath}/com.example.PythonLocalPubSub/main.py {configuration:/Topic} {configuration:/Message}"
+      run: "python3 -u {artifacts:decompressedPath}/com.example.PythonLocalPubSub/main.py {configuration:/Topic} {configuration:/Message}"
